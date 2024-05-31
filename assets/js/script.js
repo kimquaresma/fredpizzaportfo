@@ -33,30 +33,47 @@ $(function(){  //로드후 실행되는 스크립트구현시 사용
 
 
   ScrollTrigger.create({
-    trigger:".sc-bestmenu",
-    start:"0% 15%",
-    end:"100% 0%",
-    onEnter:function(){
-      $('.header .white').css('display','none');
-      $('.header .red').css('display','block');
-      $('.header .wrap .gnb .main-menu>li>a').css('color','#000')
-      $('.header').css(
-        'background-color','#fff'
-      )
-      $('.header .gnb .title').css('color','#000')
-      $('.side-btn').addClass('show')
+    trigger: ".sc-bestmenu",
+    start: "0% 15%",
+    end: "100% 0%",
+    onEnter: function () {
+      $('.header').addClass('on');
+        $('.header .white').css('display', 'none');
+        $('.header .red').css('display', 'block');
+        // $('.header .wrap .gnb .main-menu>li>a').css('color', '#000');
+        // $('.header').css('background-color', '#fff');
+        // $('.header .gnb .title').css('color', '#000');
+        $('.side-btn').addClass('show');
+        
+        // $('.mobile .ham .first').css('background-color', '#000');
+        // $('.mobile .ham .sec').css('background-color', '#000');
+        // $('.mobile .ham .third').css('background-color', '#000');
+
+
     },
-    onLeaveBack:function(){
-      $('.header .white').css('display','block')
-      $('.header .red').css('display','none');
-      $('.header .wrap .gnb .main-menu>li>a').css('color','#fff')
-      $('.header').css(
-        'background-color','transparent'
-      );
-      $('.header .gnb .title').css('color','#fff')
-      $('.side-btn').removeClass('show')
+    onLeaveBack: function () {
+      $('.header').removeClass('on');
+
+        $('.header .white').css('display', 'block');
+        $('.header .red').css('display', 'none');
+        // $('.header .wrap .gnb .main-menu>li>a').css('color', '#fff');
+        // $('.header').css('background-color', 'transparent');
+        // $('.header .gnb .title').css('color', '#fff');
+        $('.side-btn').removeClass('show');
+        // $('.mobile .ham .first').css('background-color', '#fff');
+        // $('.mobile .ham .sec').css('background-color', '#fff');
+        // $('.mobile .ham .third').css('background-color', '#fff');
+
     }
-  })
+    
+
+});
+
+
+
+
+
+
     
 
 
