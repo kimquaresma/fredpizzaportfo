@@ -78,6 +78,19 @@
     width: 100vw;
     height: 80px;
 }
+.header.on{
+    background: #fff;
+}
+.header.on .wrap{
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: calc(100% - 80px);
+    max-width: 1280px;
+}
 .header .wrap{
     position: relative;
     display: flex;
